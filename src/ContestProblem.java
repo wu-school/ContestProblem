@@ -1,13 +1,20 @@
+import java.util.Scanner;
 public class ContestProblem { //solution
     public static void main(String[] args) {
-        
+        Scanner scan = new Scanner(System.in);
+        while(scan.hasNext()){
+            System.out.println(calculatePaths(scan.nextInt(), scan.nextInt()));
+        }
+
 
     }    
 
-    public int calculatePaths(int[][] grid){ 
+    public static long calculatePaths(int x, int y){ 
         //each point on the array is corresponding to a vertex, where [0][0] is the starting point
         //the value in the array is the number of possible paths leading to that vertex from the initial starting point
         
+        long[][] grid = new long[x+1][y+1];
+
         for(int i=0; i<grid.length; i++){
             //the only way to get to any of the verticies in the leftmost column is by moving straight down
             grid[i][0] = 1;
@@ -26,9 +33,7 @@ public class ContestProblem { //solution
             }
         }
 
-        return grid[i]
-
-
+        return grid[grid.length-1][grid[0].length-1];
     }
 
 }
