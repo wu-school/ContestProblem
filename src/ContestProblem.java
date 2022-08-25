@@ -1,12 +1,14 @@
+import java.io.File;
 import java.util.Scanner;
+import java.io.IOException;
 public class ContestProblem { //solution
-    public static void main(String[] args) {
-        Scanner scan = new Scanner(System.in);
+    public static void main(String[] args) throws IOException{
+        Scanner scan = new Scanner(new File("Judges Input File.txt"));
         while(scan.hasNext()){
-            System.out.println(calculatePaths(scan.nextInt(), scan.nextInt()));
+            int a = scan.nextInt();
+            int b = scan.nextInt();
+            System.out.println(a+"x"+b+":"+calculatePaths(a,b) + " unique paths");
         }
-
-
     }    
 
     public static long calculatePaths(int x, int y){ 

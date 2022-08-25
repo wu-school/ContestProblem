@@ -1,0 +1,8 @@
+2x2:6 unique paths
+3x6:84 unique paths
+8x9:24310 unique paths
+23x13:2310789600 unique paths
+2x7:36 unique paths
+20x6:230230 unique paths
+3x15:816 unique paths
+10x10:184756 unique paths
